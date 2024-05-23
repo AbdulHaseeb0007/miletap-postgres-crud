@@ -12,7 +12,7 @@ const createAdmin = async () => {
     const data = {
         first_name: 'admin first name',
         last_name: 'admin last name',
-        email: 'admina@gmail.com',
+        email: 'admin@gmail.com',
         phone: '032123476256',
         password: hash,
         birthday: dayjs().format('YYYY-MM-DD'),

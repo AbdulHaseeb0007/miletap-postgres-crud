@@ -15,17 +15,13 @@ const checkAuthentication = (req, res, next) => {
         req.user = {};
         req.user.id = data.id;
         req.user.email = data.email;
+        req.user.user_type = data.user_type;
         req.user.token = data.token;
 
         return next();
     } catch (error) {
         console.log(error);
-        return res.status(401).json({
-            success: false,
-            statusCode: error.statusCode,
-            message: error.error,
-            data: null,
-        });
+        return res.status(401).json({ success: false, statusCode: error.statusCode, message: error.error, data: null });
     }
 };
 

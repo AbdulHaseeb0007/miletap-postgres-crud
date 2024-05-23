@@ -1,9 +1,9 @@
-const ApiResponse = (res, statusCode = 200, data = [], message) => {
+const ApiResponse = (res, statusCode = 200, payload = [], message) => {
     const response = {
         success: true,
         statusCode,
         message,
-        data,
+        payload,
     };
 
     return res.status(statusCode).json(response);
