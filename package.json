@@ -8,7 +8,8 @@
     "dev": "nodemon --env-file=.env index.js",
     "prod": "node --env-file=.env index.js",
     "migration:generate": "drizzle-kit generate",
-    "migration:apply": "node --env-file=.env migration.js"
+    "migration:apply": "node --env-file=.env migration.js",
+    "seed": "node --env-file=.env ./src/db/seed.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
+    "dayjs": "^1.11.11",
     "drizzle-orm": "^0.30.10",
     "express": "^4.19.2",
     "helmet": "^7.1.0",

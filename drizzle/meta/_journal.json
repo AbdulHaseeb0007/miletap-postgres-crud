@@ -1,0 +1,13 @@
+{
+  "version": "6",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1716463598168,
+      "tag": "0000_rich_fabian_cortez",
+      "breakpoints": true
+    }
+  ]
+}

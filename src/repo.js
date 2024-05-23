@@ -1,9 +1,13 @@
-const db = require("./db");
-const { accounts } = require("./db/schema");
+const db = require('./db');
+const { accounts } = require('./db/schema');
 
 const connection = db.getConnection();
 
-exports.loginUsers = async () => {};
+exports.signupUsers = (data) => {
+    console.log(data);
+    return connection.insert(accounts).values(data);
+    // return
+};
 exports.getUsers = async () => {};
 exports.createUser = async () => {};
 exports.updateUser = async () => {};

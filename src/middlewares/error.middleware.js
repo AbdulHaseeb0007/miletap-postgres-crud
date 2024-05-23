@@ -1,8 +1,6 @@
 const AppError = require('../utils/appError');
 
 const errorMiddleware = (err, req, res, next) => {
-    console.log(err);
-
     if (err instanceof AppError)
         return res.status(err.statusCode).json({
             success: false,
@@ -10,6 +8,8 @@ const errorMiddleware = (err, req, res, next) => {
             payload: [],
             message: err.error,
         });
+
+    console.log(err);
 
     return res.status(500).json({
         success: false,
